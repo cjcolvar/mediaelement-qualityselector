@@ -1,0 +1,53 @@
+.mejs-controls .mejs-qualities-button {
+	position: relative;
+}
+
+.mejs-controls .mejs-qualities-button button {
+  background: transparent url(<%= asset_path "mediaelement-qualityselector/gear.png" %>) no-repeat;
+}
+
+.mejs-controls .mejs-qualities-button .mejs-qualities-selector {
+  visibility: hidden;
+  position: absolute;
+  bottom: 26px;
+  right: -10px;
+  width: 80px;
+  height: 80px;
+  background: rgba(50,50,50,0.7);
+  border: solid 1px transparent;
+  padding: 10px;
+  overflow: hidden;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}          
+
+.mejs-controls .mejs-qualities-button .mejs-qualities-selector ul {
+	margin: 0;
+	padding: 0;
+	display: block;
+	list-style-type: none !important;
+	overflow: hidden;
+}
+.mejs-controls .mejs-qualities-button .mejs-qualities-selector ul li {
+	margin: 0 0 6px 0;
+	padding: 0;
+	list-style-type: none !important;
+	display: block;
+	color: #fff;
+	overflow: hidden;
+}
+.mejs-controls .mejs-qualities-button .mejs-qualities-selector ul li input {
+	clear: both;
+	float: left;
+	margin: 3px 3px 0 5px;
+}
+.mejs-controls .mejs-qualities-button .mejs-qualities-selector ul li label {
+	width: 60px;
+	float: left;
+	padding: 4px 0 0 0;
+	line-height: 15px;
+	font-family: helvetica, arial;
+	font-size: 10px;
+}
+
