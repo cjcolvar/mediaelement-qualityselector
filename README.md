@@ -1,4 +1,4 @@
-# Mediaelement::Qualityselector
+# Mediaelement-Qualityselector
 
 Quality selector plugin to MediaElement.js
 
