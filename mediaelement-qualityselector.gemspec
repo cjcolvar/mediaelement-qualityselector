@@ -6,10 +6,10 @@ require 'mediaelement-qualityselector/version'
 Gem::Specification.new do |gem|
   gem.name          = "mediaelement-qualityselector"
   gem.version       = Mediaelement::Qualityselector::VERSION
-  gem.authors       = ["Chris Colvard"]
-  gem.email         = ["cjcolvar@indiana.edu"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
+  gem.authors       = ["Chris Colvard", "Phuong Dinh"]
+  gem.email         = ["cjcolvar@indiana.edu", "pdinh@indiana.edu"]
+  gem.description   = %q{A plugin for MediaElement player that lets user pick different stream quality from within the player}
+  gem.summary       = %q{Quality selector plugin for MediaElement player}
   gem.homepage      = ""
 
   gem.files         = `git ls-files`.split($/)
