@@ -10,8 +10,6 @@
 
 	$.extend(MediaElementPlayer.prototype, {
 	
-		hasChapters: false,
-
 		buildqualities: function(player, controls, layers, media) {
 			var t = this, 
 				i, 
@@ -78,10 +76,20 @@
 				player.container.find('.mejs-qualities-position').addClass('mejs-qualities-position-hover');
 			}
 
-			// Adds to list and pre-selects the quality
+			// Gets the index of pre-selected quality, default is the first quality 
+      var selectedIndex = 0;
 			for (var i = 0; i < player.qualities.length; i++) {
         var q = player.qualities[i];
-        var isSelected = q.getAttribute("data-quality") === player.selectedQuality;
+        if (q.getAttribute("data-quality") === player.selectedQuality) {
+          selectedIndex = i;
+          break;
+        }
+      }
+
+			// Adds qualities to list and pre-selects the chosen one
+			for (var i = 0; i < player.qualities.length; i++) {
+        var q = player.qualities[i];
+        var isSelected = selectedIndex == i;
 			  player.addQualityButton(q.getAttribute("data-quality"), q.getAttribute("src"), q.getAttribute("type"), isSelected);
 
         // Makes current player use the pre-selected quality
